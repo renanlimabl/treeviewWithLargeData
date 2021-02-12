@@ -1,0 +1,163 @@
+(function(TreeView) {
+    const data = [
+    {
+        "id":5,
+        "parent_id":1,
+        "name":"Ubook_Default",
+        "is_active":true,
+        "position":2,
+        "level":1,
+        "product_count":27916,
+        "children":[
+            {
+                "id":236,
+                "parent_id":5,
+                "name":"Psicologia",
+                "is_active":true,
+                "position":0,
+                "level":2,
+                "product_count":267,
+                "children":[
+                    {
+                        "id":414,
+                        "parent_id":236,
+                        "name":"Psicologia",
+                        "is_active":true,
+                        "position":1,
+                        "level":3,
+                        "product_count":265,
+                        "children":[]
+                    },
+                    {
+                        "id":413,
+                        "parent_id":236,
+                        "name":"Educa\u00e7\u00e3o",
+                        "is_active":true,
+                        "position":2,
+                        "level":3,
+                        "product_count":2,
+                        "children":[]
+                    },
+                    {
+                        "id":412,
+                        "parent_id":236,
+                        "name":"Cognitiva",
+                        "is_active":false,
+                        "position":3,
+                        "level":3,
+                        "product_count":0,
+                        "children":[]
+                    }
+                ]
+            },
+            {
+                "id":65,
+                "parent_id":5,
+                "name":"Autoajuda",
+                "is_active":true,
+                "position":1,
+                "level":2,
+                "product_count":1310,
+                "children":[
+                    {
+                        "id":572,
+                        "parent_id":65,
+                        "name":"Sexo",
+                        "is_active":false,
+                        "position":1,
+                        "level":3,
+                        "product_count":0,
+                        "children":[]
+                    },
+                ]
+            }
+        ]
+    }
+]
+    const dataDiff = [
+    {
+        "id":5,
+        "parent_id":1,
+        "name":"Ubook_Default",
+        "is_active":true,
+        "position":2,
+        "level":1,
+        "product_count":27916,
+        "children":[
+            {
+                "id":236,
+                "parent_id":5,
+                "name":"Psicologia",
+                "is_active":true,
+                "position":0,
+                "level":2,
+                "product_count":267,
+                "children":[
+                    {
+                        "id":414,
+                        "parent_id":236,
+                        "name":"Psicologia",
+                        "is_active":true,
+                        "position":1,
+                        "level":3,
+                        "product_count":265,
+                        "children":[]
+                    },
+                    {
+                        "id":413,
+                        "parent_id":236,
+                        "name":"Educa\u00e7\u00e3o",
+                        "is_active":true,
+                        "position":2,
+                        "level":3,
+                        "product_count":2,
+                        "children":[]
+                    },
+                    {
+                        "id":412,
+                        "parent_id":236,
+                        "name":"Cognitiva",
+                        "is_active":false,
+                        "position":3,
+                        "level":3,
+                        "product_count":0,
+                        "children":[]
+                    }
+                ]
+            },
+            {
+                "id":65,
+                "parent_id":5,
+                "name":"Autoajuda",
+                "is_active":true,
+                "position":1,
+                "level":2,
+                "product_count":1310,
+                "children":[
+                    {
+                        "id":572,
+                        "parent_id":65,
+                        "name":"Sexo",
+                        "is_active":false,
+                        "position":1,
+                        "level":3,
+                        "product_count":0,
+                        "children":[]
+                    },
+                ]
+            }
+        ]
+    }
+]
+      var tree = new TreeView(data, 'tree');
+      var tree2 = new TreeView(dataDiff, 'tree2');
+      var tree3 = new TreeView(data, 'tree3');
+      var tree4 = new TreeView(data, 'tree4');
+      
+      tree.on('select', function () {  });
+      tree2.on('select', function () {  });
+      tree3.on('select', function () {  });
+      tree4.on('select', function () {  });
+      
+    
+}(window.TreeView));
