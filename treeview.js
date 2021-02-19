@@ -94,17 +94,17 @@
           content.appendChild(text);
           content.appendChild(checkbox)
           leaf.appendChild(content);
-          if (item.children && item.children.length > 0) {
-            var children = document.createElement('div');
-            children.setAttribute('class', 'tree-child-leaves');
-            forEach(item.children, function (child) {
+          if (item.children_data && item.children_data.length > 0) {
+            var children_data = document.createElement('div');
+            children_data.setAttribute('class', 'tree-child-leaves');
+            forEach(item.children_data, function (child) {
               var childLeaf = renderLeaf(child);
-              children.appendChild(childLeaf);
+              children_data.appendChild(childLeaf);
             });
             if (!item.expanded) {
-              children.classList.add('hidden');
+              children_data.classList.add('hidden');
             }
-            leaf.appendChild(children);
+            leaf.appendChild(children_data);
           } else {
             expando.classList.add('hidden');
           }
@@ -147,7 +147,10 @@
           var id = parent.dataset.item
           var firstId = JSON.parse(id).id
           var text = parent.querySelector('.tree-leaf-text').innerText
-          console.log(firstId, text)
+          
+          localStorage.setItem('id', firstId)
+          localStorage.setItem('name', text)
+          
           
           // console.log(text)
           
